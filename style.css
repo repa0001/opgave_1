@@ -1,0 +1,120 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
+}
+
+main {
+  margin-top: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+h3 {
+  font-size: 1.953rem;
+  letter-spacing: -0.09rem;
+  line-height: 1.2;
+}
+/* * * * *  header * * * * */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: black;
+}
+
+p,
+dd,
+dt {
+  font-family: "Raleway", sans-serif;
+}
+
+.nike_t {
+  font-weight: bold;
+}
+
+/* kategorier */
+.kategorier {
+  margin-top: -10rem;
+  margin-left: 1rem;
+  font-size: 4rem;
+  color: black;
+}
+
+/* udvalg */
+
+.rabat p:last-child {
+  background: red;
+  padding: 0.2rem;
+  display: inline-block;
+}
+
+.udsolgt {
+  opacity: 0.5;
+}
+
+.udsolgt_1 {
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+/* Produkt  */
+
+dt {
+  font-weight: 1000;
+}
+
+dd {
+  margin-left: 1rem;
+}
+
+.info_box {
+  background-color: #d8d8d8;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.produkt_pic {
+  max-width: 600px;
+}
+
+.button {
+  font-family: "Raleway", sans-serif;
+}
