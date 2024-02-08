@@ -34,7 +34,7 @@
     grid-row: 3 / span 1;
   }
 
-  . {
+  .produkt_liste {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }

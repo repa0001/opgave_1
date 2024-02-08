@@ -37,80 +37,32 @@
 
     </header>
 
-    <template>
-        <article class="oversigt">
-            <h2 class="articletype"></h2>
-            <p class="gender"></p>
-            <p class="price"> Pris: <span></span></p>
+    <h1>PRODUKTOVERSIGT</h1>
 
-            <p class="soldoutOrNot"> På lager: <span></span> </p>
-            <p class="discountdOrNot"> På tilbud: <span></span> </p>
-            <img src="" alt="her kommer noget">
+    <main class="produkt_liste">
 
-        </article>
-    </template>
+        <template id="smallProductTemplate">
+            <article class="smallProduct">
+                <a class="read_more" href="produkt.html">
+                    <img src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp"
+                        alt="Sahara Team India Fanwear Round Neck Jersey">
+                </a>
+                <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+                <p class="subtle">Tshirts | Nike</p>
+                <p class="price"> <span>Prev.</span> DKK 1595 ,-</p>
+                <div class="discounted">
+                    <p>Now DKK 1560,-</p>
+                    <p> -34%</p>
+                </div>
+                <a class="read_more" href="produkt.html">Read More</a>
+            </article>
+        </template>
 
-    <h1>PRODUKT OVERSIGT</h1>
 
-    <main>
     </main>
 
-    <script>
 
-
-
-        const url = "https://kea-alt-del.dk/t7/api/products";
-
-        // const url = "https://kea-alt-del.dk/t7/api/products?limit=2000";
-
-        fetch(url)
-            .then((response) => response.json())
-            .then(dataReceived);
-
-        function dataReceived(data) {
-            // we have the data
-            console.log(data);
-            data.forEach(listoversigt);
-        }
-
-        function listoversigt(oneoversigt) {
-            console.log("listoversigt");
-            const oversigt = document.querySelector("template").content;
-            const myClone = oversigt.cloneNode(true);
-
-            myClone.querySelector(".articletype").textContent = oneoversigt.articletype;
-            myClone.querySelector(".gender").textContent = oneoversigt.gender;
-            myClone.querySelector(".price span").textContent = oneoversigt.price;
-
-
-            if (oneoversigt.hasSoldout) {
-                myClone.querySelector(".soldoutOrNot span").textContent = "yes";
-
-                myClone.querySelector(".soldoutOrNot span").textContent = "no";
-            }
-
-            // if (product.soldout) {
-            //     copy.querySelector("article").classList.add("soldOut");
-            // }
-
-            if (oneoversigt.hasSoldout) {
-                myClone.querySelector(".discountdOrNot span").textContent = "yes";
-
-                myClone.querySelector(".discountdOrNot span").textContent = "no";
-            }
-
-            myClone.querySelector("img").src = oneoversigt.img;
-
-            const parentElement = document.querySelector("main");
-            parentElement.appendChild(myClone);
-
-        }
-
-
-
-    </script>
-
-    <!-- <script src="main.js"></script> -->
+    <script src="products.js"></script>
 
 </body>
 
